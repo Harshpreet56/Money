@@ -17,7 +17,8 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/all");
+      // const res = await axios.get("http://localhost:5000/api/all");
+      const res = await axios.get("https://money-1-byq8.onrender.com/api/all");
 
       const incomeData = res.data.filter((item) => item.type === "income");
       const expenseData = res.data.filter((item) => item.type === "expense");
