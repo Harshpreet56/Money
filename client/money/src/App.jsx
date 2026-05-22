@@ -17,8 +17,8 @@ function App() {
 
   const fetchData = async () => {
     try {
-      // const res = await axios.get("http://localhost:5000/api/all");
-      const res = await axios.get("https://money-1-byq8.onrender.com/api/all");
+      const res = await axios.get("http://localhost:5000/api/all");
+      // const res = await axios.get("https://money-1-byq8.onrender.com/api/all");
 
       const incomeData = res.data.filter((item) => item.type === "income");
       const expenseData = res.data.filter((item) => item.type === "expense");
@@ -74,7 +74,7 @@ function App() {
   const balance = totalIncome - totalExpense;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 p-6 text-white">
+    <div className="min-h-screen bg-linear-to-br from-gray-900 to-gray-800 p-6 text-white">
       <div className="max-w-5xl mx-auto">
 
         {/* Header */}
